@@ -42,3 +42,33 @@
 .filter-tab .ant-select-selector {
   width: 150px !important;
 }
+
+.print-css {
+  margin: 5px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* CSS for the Thank You Page */
+.Thankyou {
+  text-align: center;
+  padding: 20px;
+  background-color: #4c99af; /* Green background color */
+  color: #fff; /* White text color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+}
+
+.Thankyou h1 {
+  font-size: 46px;
+}

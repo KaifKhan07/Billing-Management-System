@@ -19,13 +19,13 @@ const Analytics = ({ allTransection }) => {
   const totalIncomeTransactions = allTransection.filter(
     (transaction) => transaction.type === "income"
   );
-  const totalExpenseTransactions = allTransection.filter(
-    (transaction) => transaction.type === "expense"
+  const totalBillTransactions = allTransection.filter(
+    (transaction) => transaction.type === "bill"
   );
   const totalIncomePercent =
     (totalIncomeTransactions.length / totalTransaction) * 100;
-  const totalExpensePercent =
-    (totalExpenseTransactions.length / totalTransaction) * 100;
+  const totalBillPercent =
+    (totalBillTransactions.length / totalTransaction) * 100;
 
   //total turnover
   const totalTurnover = allTransection.reduce(
@@ -36,14 +36,14 @@ const Analytics = ({ allTransection }) => {
     .filter((transaction) => transaction.type === "income")
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
-  const totalExpenseTurnover = allTransection
-    .filter((transaction) => transaction.type === "expense")
+  const totalBillTurnover = allTransection
+    .filter((transaction) => transaction.type === "bill")
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
   const totalIncomeTurnoverPercent =
     (totalIncomeTurnover / totalTurnover) * 100;
-  const totalExpenseTurnoverPercent =
-    (totalExpenseTurnover / totalTurnover) * 100;
+  const totalBillTurnoverPercent =
+    (totalBillTurnover / totalTurnover) * 100;
   return (
     <>
       <div className="row m-3">
@@ -57,7 +57,7 @@ const Analytics = ({ allTransection }) => {
                 Income : {totalIncomeTransactions.length}
               </h5>
               <h5 className="text-danger">
-                Expense : {totalExpenseTransactions.length}
+                Bill : {totalBillTransactions.length}
               </h5>
               <div className="d-flex flex-column align-items-center">
                 <Progress
@@ -70,7 +70,7 @@ const Analytics = ({ allTransection }) => {
                   type="circle"
                   strokeColor={"red"}
                   className="mx-2 mt-3"
-                  percent={totalExpensePercent.toFixed(0)}
+                  percent={totalBillPercent.toFixed(0)}
                 />
               </div>
             </div>
@@ -81,7 +81,7 @@ const Analytics = ({ allTransection }) => {
             <div className="card-header">Total TurnOver : {totalTurnover}</div>
             <div className="card-body">
               <h5 className="text-success">Income : {totalIncomeTurnover}</h5>
-              <h5 className="text-danger">Expense : {totalExpenseTurnover}</h5>
+              <h5 className="text-danger">Bill : {totalBillTurnover}</h5>
               <div>
                 <Progress
                   type="circle"
@@ -93,7 +93,7 @@ const Analytics = ({ allTransection }) => {
                   type="circle"
                   strokeColor={"red"}
                   className="mx-2 mt-3"
-                  percent={totalExpenseTurnoverPercent.toFixed(0)}
+                  percent={totalBillTurnoverPercent.toFixed(0)}
                 />
               </div>
             </div>
@@ -126,12 +126,12 @@ const Analytics = ({ allTransection }) => {
           })}
         </div>
         <div className="col-md-3">
-          <h6 className="bg-warning p-2 text-light">Categorywise Expense</h6>
+          <h6 className="bg-warning p-2 text-light">Categorywise Bill</h6>
           {categories.map((category) => {
             const amount = allTransection
               .filter(
                 (transaction) =>
-                  transaction.type === "expense" &&
+                  transaction.type === "bill" &&
                   transaction.category === category
               )
               .reduce((acc, transaction) => acc + transaction.amount, 0);
@@ -141,7 +141,7 @@ const Analytics = ({ allTransection }) => {
                   <div className="card-body">
                     <h6>{category}</h6>
                     <Progress
-                      percent={((amount / totalExpenseTurnover) * 100).toFixed(
+                      percent={((amount / totalBillTurnover) * 100).toFixed(
                         0
                       )}
                     />

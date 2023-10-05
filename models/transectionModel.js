@@ -6,6 +6,18 @@ const transectionSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    invoice_no: {
+      type: String,
+      required: [true, "invoice_no is required"],
+    },
+    name: {
+      type: String,
+      required: [true, "name is required"],
+    },
+    project: {
+      type: String,
+      required: [true, "project is required"],
+    },
     amount: {
       type: Number,
       required: [true, "amount is required"],
@@ -21,9 +33,29 @@ const transectionSchema = new mongoose.Schema(
     refrence: {
       type: String,
     },
+    work_status: {
+      type: String,
+      required: [true, "work_status is required"],
+    },
+    phone_number: {
+      type: Number,
+      required: [true, "phone_number is required"],
+    },
+    bank_account: {
+      type: Number,
+      required: [true, "bank_account is required"],
+    },
+    branch: {
+      type: String,
+      required: [true, "branch is required"],
+    },
     description: {
       type: String,
       required: [true, "desc is required"],
+    },
+    address: {
+      type: String,
+      required: [true, "addr is required"],
     },
     date: {
       type: Date,

@@ -1,7 +1,7 @@
 {
-  "name": "Expanse-Management-System",
+  "name": "billing-management-system",
   "version": "1.0.0",
-  "description": "expanse tracker app",
+  "description": "Billing Web Application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm start\" \"npm run client\" "
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Khan Kaif",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
