@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
       <>
       <div className="AboutUs">
-        <h1>ABOUT US-</h1>
+        <h1>ABOUT US</h1>
         <h6>
         About H.K Design Consultant - Your Billing Solution Partner<br></br>
 <br></br>
