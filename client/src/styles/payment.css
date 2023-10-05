@@ -1,0 +1,84 @@
+
+/* payment.css */
+
+.payment.container-fluid {
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.margin-class{
+  margin-top: 20px;
+}
+.payment .card {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment .heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment .form-group {
+  margin-bottom: 20px;
+}
+
+.payment .text-warning {
+  color: #ff8800;
+}
+
+.payment input[type="text"],
+.payment input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.payment input[type="text"]:focus,
+.payment input[type="password"]:focus {
+  border-color: #ff8800;
+}
+
+.payment.row.d-flex {
+  justify-content: space-between;
+}
+
+.payment .col-sm-4,
+.payment .col-sm-3,
+.payment .col-sm-5 {
+  flex: 0 0 auto;
+}
+
+.payment.btn-success.custom-menu {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment.btn-success.custom-menu:hover {
+  background-color: #45a049;
+}
+
+/* Center the card on small screens */
+@media (max-width: 768px) {
+  .payment.card {
+    width: 90%;
+  }
+}
