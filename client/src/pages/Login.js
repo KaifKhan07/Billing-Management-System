@@ -3,6 +3,7 @@ import { Form, Input, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/Spinner";
+import {API_URL} from "./helper"
 import "../styles/Loginpage.css";
 const Login = () => {
   const img =
@@ -13,7 +14,7 @@ const Login = () => {
   const submitHandler = async (values) => {
     try {
       setLoading(true);
-      const { data } = await axios.post("/users/login", values);
+      const { data } = await axios.post(`${API_URL}/users/login`, values);
       setLoading(false);
       message.success("login success");
       localStorage.setItem(
@@ -23,6 +24,7 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       setLoading(false);
+      console.log(error)
       message.error("something went wrong");
     }
   };

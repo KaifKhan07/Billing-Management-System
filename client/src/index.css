@@ -72,3 +72,15 @@
 .Thankyou h1 {
   font-size: 46px;
 }
+
+.btn-primary:hover{
+  background-color: purple;
+}
+
+.btn-success:hover{
+  background-color: purple;
+}
+
+.btn-danger:hover{
+  background-color: black;
+}

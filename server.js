@@ -4,45 +4,38 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const path = require("path");
-const mongoose = require("mongoose"); // Import mongoose directly
 const connectDb = require("./config/connectDb");
 // config dot env file
 dotenv.config();
 
-// Rest object
+//databse call
+connectDb();
+
+//rest object
 const app = express();
 
-// Middlewares
+//middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
-// Routes
+//routes
 //user routes
 app.use("/api/v1/users", require("./routes/userRoute"));
 //transections routes
 app.use("/api/v1/transections", require("./routes/transectionRoutes"));
 
-// Static files
+//static files
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-// Initialize the Mongoose connection and start the server
-const startServer = async () => {
-  try {
-    // Connect to the MongoDB database
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log(`MongoDB Connected: ${mongoose.connection.host}`.bgCyan.white);
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
-    // Start listening for requests after the database connection is established
-    const PORT = process.env.PORT || 8080;
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error(`${error}`.bgRed);
-    process.exit(1);
-  }
-};
+//port
+const PORT = 8080 || process.env.PORT;
 
-// Call the function to start the server
-startServer();
+//listen server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

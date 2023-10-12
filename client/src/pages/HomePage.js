@@ -13,7 +13,7 @@ import moment from "moment";
 import Analytics from "../components/Analytics";
 import ReactToPrint from 'react-to-print';
 import { Link } from "react-router-dom";
-
+import {API_URL} from "./helper"
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
@@ -21,7 +21,7 @@ const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [allTransection, setAllTransection] = useState([]);
-  const [frequency, setFrequency] = useState("7");
+  const [frequency, setFrequency] = useState("365");
   const [selectedDate, setSelectedate] = useState([]);
   const [type, setType] = useState("all");
   const [viewData, setViewData] = useState("table");
@@ -115,7 +115,7 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/transections/get-transection", {
+        const res = await axios.post(`${API_URL}/transections/get-transection`, {
           userid: user._id,
           frequency,
           selectedDate,
@@ -134,7 +134,7 @@ const HomePage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("/transections/delete-transection", {
+      await axios.post(`${API_URL}/transections/delete-transection`, {
         transacationId: record._id,
       });
       setLoading(false);
@@ -152,7 +152,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       setLoading(true);
       if (editable) {
-        await axios.post("/transections/edit-transection", {
+        await axios.post(`${API_URL}/transections/edit-transection`, {
           payload: {
             ...values,
             userId: user._id,
@@ -162,7 +162,7 @@ const HomePage = () => {
         setLoading(false);
         message.success("Transaction Updated Successfully");
       } else {
-        await axios.post("/transections/add-transection", {
+        await axios.post(`${API_URL}/transections/add-transection`, {
           ...values,
           userid: user._id,
         });
