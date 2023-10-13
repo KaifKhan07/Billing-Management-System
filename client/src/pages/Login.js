@@ -39,8 +39,10 @@ const Login = () => {
     <>
       <div className="login-page ">
         {loading && <Spinner />}
-        <div className="row container">
+        <div className="row container center">
+        <div className="col-md-10">
           <h1>Billing Management System - MERN STACK</h1>
+          </div>
           <div className="col-md-6">
             <img src={img} alt="login-img" width={"100%"} height="100%" />
           </div>

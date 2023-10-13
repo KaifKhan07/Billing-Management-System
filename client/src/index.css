@@ -28,8 +28,13 @@
 }
 
 .anticon svg {
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
+  color: black;
+}
+
+.nav-link .anticon svg {
+  color: white;
 }
 
 .active-icon {
@@ -44,7 +49,7 @@
 }
 
 .print-css {
-  margin: 5px;
+  margin-left: 10px;
 }
 
 .footer {
@@ -59,7 +64,7 @@
 .Thankyou {
   text-align: center;
   padding: 20px;
-  background-color: #4c99af; /* Green background color */
+  background-color: black; /* Green background color */
   color: #fff; /* White text color */
   font-family: Arial, sans-serif;
   display: flex;
@@ -71,16 +76,18 @@
 
 .Thankyou h1 {
   font-size: 46px;
+  color: white;
 }
 
 .btn-primary:hover{
-  background-color: purple;
+  background-color: rgb(128, 0, 0);
 }
 
 .btn-success:hover{
-  background-color: purple;
+  background-color: rgb(48, 0, 131);
 }
 
 .btn-danger:hover{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  font-size: larger;
 }

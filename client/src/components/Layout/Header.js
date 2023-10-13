@@ -40,7 +40,7 @@ const Header = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 {" "}
-                <h6 className="nav-link ">
+                <h6 className="nav-link " style={{color: "white", paddingTop:20}}>
                   <UserOutlined /> {loginUser && loginUser.name}
                 </h6>{" "}
               </li>
