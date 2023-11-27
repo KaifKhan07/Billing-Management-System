@@ -80,14 +80,32 @@
 }
 
 .btn-primary:hover{
-  background-color: rgb(128, 0, 0);
+  background-color: #3498db;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-success:hover{
-  background-color: rgb(48, 0, 131);
+  background-color: #40a168;
 }
 
 .btn-danger:hover{
   background-color: rgb(0, 0, 0);
   font-size: larger;
+}
+
+.login-form a:hover{
+  text-decoration: underline;
+}
+.login-form button{
+  text-decoration: none;
+}
+
+.register-form a:hover{
+  text-decoration: underline;
+}
+register-form button {
+  text-decoration: none;
 }

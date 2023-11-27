@@ -19,7 +19,7 @@ const transectionSchema = new mongoose.Schema(
       required: [true, "project is required"],
     },
     amount: {
-      type: Number,
+      type: String,
       required: [true, "amount is required"],
     },
     type: {
@@ -30,9 +30,6 @@ const transectionSchema = new mongoose.Schema(
       type: String,
       requires: [true, "cat is required"],
     },
-    refrence: {
-      type: String,
-    },
     work_status: {
       type: String,
       required: [true, "work_status is required"],
@@ -40,14 +37,6 @@ const transectionSchema = new mongoose.Schema(
     phone_number: {
       type: Number,
       required: [true, "phone_number is required"],
-    },
-    bank_account: {
-      type: Number,
-      required: [true, "bank_account is required"],
-    },
-    branch: {
-      type: String,
-      required: [true, "branch is required"],
     },
     description: {
       type: String,

@@ -15,7 +15,9 @@
   margin-top: 0px;
   margin-right: 20px;
 }
-
+.my-custom-select {
+  width: 130px;
+}
 .custom-menu { 
   margin: 5px;
 }

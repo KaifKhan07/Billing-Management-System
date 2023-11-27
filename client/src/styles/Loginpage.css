@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-image: url("https://images.unsplash.com/photo-1620557868973-2ddc823c03ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+  background-image: url("../background-image.jpg");
   background-repeat: no-repeat;
   background-size: 100%; 
   background-position: center;
@@ -51,4 +51,8 @@
 
 .login-form a:hover {
   color: black !important;
+}
+
+.justify-content-between{
+  text-decoration: none;
 }
