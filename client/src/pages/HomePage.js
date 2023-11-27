@@ -225,16 +225,16 @@ const HomePage = () => {
         <div>
 
           <button
-            className="btn btn-primary"
+            className="btn btn-primary newbtn"
             onClick={() => setShowModal(true)}
           >
             Add New
           </button>
           <ReactToPrint
-            trigger={() => <button className="btn btn-primary print-css">Print</button>}
+            trigger={() => <button className="btn btn-primary print-css newbtn">Print</button>}
             content={() => componentRef.current}
           />
-          <Link className="btn btn-primary print-css" to="/Payment">Payment</Link>
+          <Link className="btn btn-primary print-css newbtn" to="/Payment">Payment</Link>
         </div>
       </div>
       <div ref={componentRef} className="content">
@@ -313,9 +313,9 @@ const HomePage = () => {
             <Input type="text" required />
           </Form.Item>
           <div className="d-flex justify-content-end">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary newbtn1">
               {" "}
-              SAVE
+              <div> SAVE </div> 
             </button>
           </div>
         </Form>

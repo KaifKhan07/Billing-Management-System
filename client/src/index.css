@@ -17,6 +17,7 @@
   box-shadow: 0 0 3px gray;
   margin-bottom: 10px;
 }
+
 /* transection page */
 
 /* antd icons */
@@ -40,6 +41,7 @@
 .active-icon {
   color: black;
 }
+
 .inactive-icon {
   color: gray;
 }
@@ -64,14 +66,17 @@
 .Thankyou {
   text-align: center;
   padding: 20px;
-  background-color: black; /* Green background color */
-  color: #fff; /* White text color */
+  background-color: black;
+  /* Green background color */
+  color: #fff;
+  /* White text color */
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+  height: 100vh;
+  /* Set the height to 100% of the viewport height for vertical centering */
 }
 
 .Thankyou h1 {
@@ -79,33 +84,42 @@
   color: white;
 }
 
-.btn-primary:hover{
-  background-color: #3498db;
+.btn-primary {
+  background-color: #004cff;
+}
+
+.newbtn:hover {
+  background-color:  #3498db;
   border: none;
   padding: 10px 14px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+.newbtn1:hover{
+  background-color:  #3498db;
+}
 
-.btn-success:hover{
+.btn-success:hover {
   background-color: #40a168;
 }
 
-.btn-danger:hover{
+.btn-danger:hover {
   background-color: rgb(0, 0, 0);
   font-size: larger;
 }
 
-.login-form a:hover{
+.login-form a:hover {
   text-decoration: underline;
 }
-.login-form button{
+
+.login-form button {
   text-decoration: none;
 }
 
-.register-form a:hover{
+.register-form a:hover {
   text-decoration: underline;
 }
+
 register-form button {
   text-decoration: none;
 }
